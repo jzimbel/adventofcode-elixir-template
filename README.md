@@ -2,9 +2,7 @@
 
 Template repository for Elixir solutions to [Advent of Code][aoc] puzzles.
 
-Built with the [Advent of Code Elixir Starter][aoc-starter].
-
-Tweaked substantially from there.
+Adapted from another [Advent of Code Elixir Starter][aoc-starter].
 
 ## Usage
 
