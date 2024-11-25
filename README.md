@@ -7,7 +7,7 @@ Adapted from another [Advent of Code Elixir Starter][aoc-starter].
 ## Usage
 
 Start by creating your own repository from this template, using the big green
-button on the landing page.
+button up there ↗️.
 
 Once that's done, let's get your project running.
 
