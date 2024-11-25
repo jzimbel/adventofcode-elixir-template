@@ -4,6 +4,14 @@ Template repository for Elixir solutions to [Advent of Code][aoc] puzzles.
 
 Adapted from another [Advent of Code Elixir Starter][aoc-starter].
 
+## ✨ Features ✨
+- Two Mix tasks: (Run `mix help <task_name>` after building the project for usage info)
+  - `mix advent.gen` - Generate boilerplate solution and test modules for a new year of puzzles.
+  - `mix advent.solve` - Run or benchmark a solution.
+- Automatically downloads puzzle inputs as needed.
+- Optional benchmarking with Benchee.
+- [Special support][shared-parse] for puzzle solutions that reuse the same parsed value for both parts.
+
 ## Usage
 
 Start by creating your own repository from this template, using the big green
@@ -74,3 +82,4 @@ container.
 
 [aoc]: https://adventofcode.com/
 [aoc-starter]: https://github.com/mhanberg/advent-of-code-elixir-starter
+[shared-parse]: lib/advent_of_code/solution/shared_parse.ex
