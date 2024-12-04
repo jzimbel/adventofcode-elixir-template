@@ -11,6 +11,7 @@ Adapted from another [Advent of Code Elixir Starter][aoc-starter].
 - Automatically downloads puzzle inputs as needed.
 - Optional benchmarking with Benchee.
 - [Special support][shared-parse] for puzzle solutions that reuse the same parsed value for both parts.
+- [Optionally run in a container that handles Erlang/Elixir installation for you.](#get-started-in-a-self-contained-environment)
 
 ## Usage
 
@@ -62,11 +63,10 @@ You have two options:
 
 ### :octocat: Run in your browser using GitHub Codespaces
 
-1. Go to the landing page of this repo.
+1. Go to the landing page of your generated repo.
 1. Click the `<> Code` drop-down menu, select the Codespaces tab, and click the
    big green button.
-1. Wait for the Codespace to build. It should be relatively speedy if you build
-   from the main branch, as I have prebuilds configured for that.
+1. Wait for the Codespace to build.[^1]
 1. Once the in-browser editor activates, follow the steps from [Usage](#usage)
    to enable puzzle downloads and run a solution. (You can use
    <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>`</kbd> to open a terminal pane.)
@@ -80,6 +80,10 @@ asking if you want to use the Dev Container. It will then guide you through
 getting set up, building the container image, and connecting to the running dev
 container.
 
+[^1]: If you decide to stick with Codespaces, consider [configuring prebuilds][prebuilds-docs]
+      for your project to speed up build time.
+
 [aoc]: https://adventofcode.com/
 [aoc-starter]: https://github.com/mhanberg/advent-of-code-elixir-starter
 [shared-parse]: lib/advent_of_code/solution/shared_parse.ex
+[prebuilds-docs]: https://docs.github.com/en/codespaces/prebuilding-your-codespaces/configuring-prebuilds
