@@ -5,9 +5,11 @@ Template repository for Elixir solutions to [Advent of Code][aoc] puzzles.
 Adapted from another [Advent of Code Elixir Starter][aoc-starter].
 
 ## ✨ Features ✨
-- Two Mix tasks: (Run `mix help <task_name>` after building the project for usage info)
+- Four Mix tasks: (Run `mix help <task_name>` after building the project for usage info)
   - `mix advent.gen` - Generate boilerplate solution and test modules for a new year of puzzles.
   - `mix advent.solve` - Run or benchmark a solution.
+  - `mix advent.test` - Run tests against a solution. (A convenience wrapping `mix test`)
+  - `mix advent.try` - Run tests followed by a solution. (A convenience wrapping `mix advent.test` and `mix advent.solve`)
 - Automatically downloads puzzle inputs as needed.
 - Optional benchmarking with Benchee.
 - [Special support][shared-parse] for puzzle solutions that reuse the same parsed value for both parts.
@@ -41,18 +43,24 @@ Generate a set of solution and test files for a new year of puzzles with
 mix advent.gen -y${YEAR}
 ```
 
-Now you can run the solutions with
+Now you can run a solution with
 ```shell
 mix advent.solve -d${DAY} [-p${1 | 2}] [-y${YEAR}] [--bench]
 ```
 
 and tests with
 ```shell
-mix test
+mix advent.test [-d${DAY}] [-y${YEAR}]
 ```
 
 either directly in your local terminal, or in VSCode's terminal pane while
 connected to a dev container as described below.
+
+As an additional convenience, you can also use
+```shell
+mix advent.try -d${DAY} [-p${1 | 2}] [-y${YEAR}] [--bench]
+```
+to run tests, and then if they pass, a solution.
 
 ## Get started in a self-contained environment
 
