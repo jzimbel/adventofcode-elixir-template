@@ -16,7 +16,8 @@
 				"terminal.integrated.defaultProfile.linux": "zsh"
 			},
 			"extensions": [
-				"JakeBecker.elixir-ls"
+				"expertlsp.expert",
+				"dogweather.byespec"
 			]
 		}
 	},
