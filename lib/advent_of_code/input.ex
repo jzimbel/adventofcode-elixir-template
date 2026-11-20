@@ -45,10 +45,8 @@ defmodule AdventOfCode.Input do
   defp from_cache!(day, year), do: File.read!(cache_path(day, year))
 
   defp download!(day, year) do
-    HTTPoison.start()
-
-    {:ok, %{status_code: 200, body: input}} =
-      HTTPoison.get("https://adventofcode.com/#{year}/day/#{day}/input", headers())
+    {:ok, %{status: 200, body: input}} =
+      Req.get("https://adventofcode.com/#{year}/day/#{day}/input", headers: headers())
 
     store_in_cache!(day, year, input)
 
